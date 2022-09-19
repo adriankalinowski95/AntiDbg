@@ -2,9 +2,13 @@
 //
 
 #include <iostream>
+#include "AntiDebugDeclarations.h"
 
 int main()
 {
+    anti_debug::DefaultCaller antidbg{};
+    antidbg.execute();
+
     std::cout << "Hello World!\n";
 }
 

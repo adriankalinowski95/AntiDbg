@@ -13,10 +13,45 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\mechanism">
+      <UniqueIdentifier>{d2b7d670-de09-4037-b68f-a421e797177a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\methods">
+      <UniqueIdentifier>{aa262e5a-da3e-4624-a7f5-3f5306b1cf13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\mechanism">
+      <UniqueIdentifier>{1749c171-515e-46b3-9f5a-c26e0858e3ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\methods">
+      <UniqueIdentifier>{e168ce3d-6ec8-4114-baa6-afc2383ee470}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AntiDbg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="BaseMethod.cpp">
+      <Filter>Source Files\mechanism</Filter>
+    </ClCompile>
+    <ClCompile Include="Caller.cpp">
+      <Filter>Source Files\mechanism</Filter>
+    </ClCompile>
+    <ClCompile Include="Int3.cpp">
+      <Filter>Source Files\methods</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BaseMethod.h">
+      <Filter>Header Files\mechanism</Filter>
+    </ClInclude>
+    <ClInclude Include="Caller.h">
+      <Filter>Header Files\mechanism</Filter>
+    </ClInclude>
+    <ClInclude Include="Int3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AntiDebugDeclarations.h">
+      <Filter>Source Files\mechanism</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
