@@ -1,13 +1,15 @@
 #pragma once
 #include <vector>
 #include <memory>
+#include "BaseMethod.h"
 
 namespace anti_debug {
 template <class... Methods>
 class Caller {
+	using BaseMethodPtr = std::shared_ptr<BaseMethod>;
 public:
 	Caller() : 
-		m_methods{std::shared_ptr<Methods>...}
+		m_methods{ std::make_shared<Methods>()...}
 	{
 		
 	}
@@ -15,8 +17,8 @@ public:
 	bool execute() {
 		bool isCorrect = true;
 		for(auto& method : m_methods) {
-			auto status = method.execute();
-			method.print(status);
+			auto status = method->execute();
+			method->print(status);
 
 			if(!status) {
 				isCorrect = false;
@@ -25,8 +27,8 @@ public:
 
 		return isCorrect;
 	}
-private:
-	std::vector<std::shared_ptr<BaseMethod>> m_methods;
 
+private:
+	std::vector<BaseMethodPtr> m_methods;
 };
 }

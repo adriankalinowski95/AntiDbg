@@ -47,11 +47,11 @@
     <ClInclude Include="Caller.h">
       <Filter>Header Files\mechanism</Filter>
     </ClInclude>
-    <ClInclude Include="Int3.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="AntiDebugDeclarations.h">
-      <Filter>Source Files\mechanism</Filter>
+      <Filter>Header Files\mechanism</Filter>
+    </ClInclude>
+    <ClInclude Include="Int3.h">
+      <Filter>Header Files\methods</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

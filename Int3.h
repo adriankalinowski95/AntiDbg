@@ -5,7 +5,7 @@ namespace anti_debug {
 class Int3 : public BaseMethod {
 public:
 	bool execute() override;
-	void print(bool status) override;
+	std::string_view getMethodName() override;
 };
 }
 
