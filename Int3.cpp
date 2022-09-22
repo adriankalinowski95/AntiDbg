@@ -1,4 +1,5 @@
 #include "Int3.h"
+#include <excpt.h>
 #include <iostream>
 
 namespace anti_debug{ 
@@ -19,11 +20,11 @@ namespace anti_debug{
     exception handler receives control.
 */
 bool Int3::execute() {
-    try
+    __try
     {
         __debugbreak();
     }
-    catch(...) {
+    __except(EXCEPTION_EXECUTE_HANDLER) {
         return true;
     }
 
